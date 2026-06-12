@@ -1,0 +1,38 @@
+name: demo-heartbeat
+
+# The portfolio claims "4 live in production" — this checks that claim hourly.
+# A failure makes GitHub email the repo owner; cold Fly.io machines get retries.
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check the site and all four live demos
+        run: |
+          check() {
+            url="$1"
+            for attempt in 1 2 3; do
+              code=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 30 \
+                -A "Mozilla/5.0 (compatible; portfolio-heartbeat)" "$url") || code=000
+              case "$code" in
+                2*|3*) echo "OK   $code  $url"; return 0 ;;
+              esac
+              echo "warn $code  $url (attempt $attempt)"
+              sleep 45
+            done
+            echo "FAIL      $url"
+            return 1
+          }
+          fail=0
+          check "https://sasaca.github.io/"               || fail=1
+          check "https://idot-pim-sasaca.fly.dev/health"  || fail=1
+          check "https://lustro-web.fly.dev/"             || fail=1
+          check "https://viveguate.gt/"                   || fail=1
+          check "https://lumetric-films.vercel.app/"      || fail=1
+          exit $fail
