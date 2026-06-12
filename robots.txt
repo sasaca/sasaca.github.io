@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sasaca.github.io/sitemap.xml

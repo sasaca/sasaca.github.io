@@ -12,6 +12,8 @@
 <meta property="og:image" content="https://sasaca.github.io/assets/img/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Santiago Saca — I fix enterprise data by day and build the tools I wish existed by night. 5 products shipped solo, 4 live in production.">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Santiago Saca — Business Data Consultant &amp; Builder">
 <meta name="twitter:description" content="Enterprise data consultant who ships real software: five products built end to end, four live in production.">
@@ -20,28 +22,76 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Santiago Saca",
-  "jobTitle": "Business Data Consultant",
-  "worksFor": { "@type": "Organization", "name": "Genpact" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US" },
-  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Indiana University Bloomington" },
-  "email": "mailto:santiagosaca23@gmail.com",
-  "url": "https://sasaca.github.io/",
-  "sameAs": [
-    "https://www.linkedin.com/in/santiago-saca/",
-    "https://github.com/sasaca"
-  ],
-  "knowsLanguage": ["en", "es"],
-  "knowsAbout": ["Master Data Management", "Data Governance", "Data Quality", "Product Information Management", "Supplier Information Management"]
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://sasaca.github.io/#me",
+      "name": "Santiago Saca",
+      "jobTitle": "Business Data Consultant",
+      "worksFor": { "@type": "Organization", "name": "Genpact" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Indiana University Bloomington" },
+      "email": "mailto:santiagosaca23@gmail.com",
+      "url": "https://sasaca.github.io/",
+      "image": "https://sasaca.github.io/assets/img/profile.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/santiago-saca/",
+        "https://github.com/sasaca"
+      ],
+      "knowsLanguage": ["en", "es"],
+      "knowsAbout": ["Master Data Management", "Data Governance", "Data Quality", "Product Information Management", "Supplier Information Management", "Entity Resolution"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sasaca.github.io/#site",
+      "url": "https://sasaca.github.io/",
+      "name": "Santiago Saca — Business Data Consultant & Builder",
+      "author": { "@id": "https://sasaca.github.io/#me" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://sasaca.github.io/#projects",
+      "name": "Projects by Santiago Saca",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareApplication", "name": "iDOT PIM", "url": "https://idot-pim-sasaca.fly.dev", "applicationCategory": "BusinessApplication", "description": "AI-assisted master data management platform for vendor, customer, and product domains with approval workflows, compliance routing, and segregation of duties.", "author": { "@id": "https://sasaca.github.io/#me" } } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareApplication", "name": "Lustro", "url": "https://lustro-web.fly.dev", "applicationCategory": "BusinessApplication", "description": "AI-powered master-data cleansing that turns dirty vendor lists into SAP-loadable files, with a human in the loop only when confidence is low.", "author": { "@id": "https://sasaca.github.io/#me" } } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "WebSite", "name": "ViveGuate", "url": "https://viveguate.gt", "description": "Guatemala's Zillow: aggregated, deduplicated property listings on one map with comps-based price insights.", "author": { "@id": "https://sasaca.github.io/#me" } } },
+        { "@type": "ListItem", "position": 4, "item": { "@type": "VideoGame", "name": "The Veil Strand", "description": "A solo-built fishing life-sim in Godot 4 where every story beat is something you catch. In development for Steam.", "author": { "@id": "https://sasaca.github.io/#me" } } },
+        { "@type": "ListItem", "position": 5, "item": { "@type": "WebSite", "name": "Lumetric Films", "url": "https://lumetric-films.vercel.app", "description": "Cinematic portfolio and booking site designed and built for a New York video production studio.", "author": { "@id": "https://sasaca.github.io/#me" } } }
+      ]
+    }
+  ]
 }
 </script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23faf6ee'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-style='italic' text-anchor='middle' fill='%23a0431f'%3ES%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.className = 'js';</script>
 <style>
+  @font-face {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url("assets/fonts/fraunces.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Fraunces";
+    font-style: italic;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url("assets/fonts/fraunces-italic.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("assets/fonts/inter.woff2") format("woff2");
+  }
+
   :root {
     --cream: #faf6ee;
     --cream-deep: #f3ecdd;
@@ -456,6 +506,111 @@
     .hero-actions { gap: 0.9rem; }
     .btn { padding: 0.7rem 1.2rem; }
   }
+
+  /* ---------- Working rules (Method) ---------- */
+  .laws { list-style: none; border-top: 1px solid var(--hairline); }
+  .laws li {
+    display: grid; gap: 0.35rem clamp(2rem, 5vw, 4.5rem);
+    padding-block: var(--space-2);
+    border-bottom: 1px solid var(--hairline-soft);
+  }
+  @media (min-width: 900px) {
+    .laws li { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: baseline; }
+  }
+  .laws .law {
+    font-family: var(--serif); font-style: italic; font-weight: 420;
+    font-size: var(--step-1); line-height: 1.35; color: var(--ink);
+    text-wrap: balance;
+  }
+  .laws .law::before { content: "“"; color: var(--accent); }
+  .laws .law::after { content: "”"; color: var(--accent); }
+  .laws .receipt {
+    font-size: var(--step--1); color: var(--muted); line-height: 1.6;
+    max-width: var(--measure);
+  }
+
+  /* ---------- Interactive figures ---------- */
+  html:not(.js) .needs-js { display: none; }
+  .fig-frame {
+    border: 1px solid var(--hairline); border-radius: 6px;
+    background: var(--cream-deep);
+    box-shadow: 0 1px 2px rgba(28, 24, 20, 0.05), 0 16px 40px -12px rgba(28, 24, 20, 0.18);
+    overflow: hidden;
+  }
+  .voro-canvas { display: block; width: 100%; height: 220px; cursor: grab; touch-action: none; }
+  .voro-canvas:active { cursor: grabbing; }
+
+  .matcher { padding: clamp(1rem, 2.5vw, 1.5rem); display: grid; gap: 0.8rem; }
+  .matcher label {
+    display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem;
+  }
+  .matcher input {
+    width: 100%; box-sizing: border-box;
+    font: 500 var(--step--1) var(--sans); color: var(--ink);
+    background: var(--cream); border: 1px solid var(--hairline); border-radius: 4px;
+    padding: 0.55rem 0.7rem;
+  }
+  .matcher input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .match-meter { display: flex; align-items: center; gap: 0.8rem; }
+  .match-bar { flex: 1; height: 3px; background: rgba(28, 24, 20, 0.1); border-radius: 2px; overflow: hidden; }
+  .match-bar b { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.3s ease; }
+  .match-score { font-size: var(--step--1); font-weight: 600; color: var(--ink); min-width: 3.2rem; text-align: right; font-variant-numeric: tabular-nums; }
+  .match-verdict {
+    font-family: var(--serif); font-style: italic; font-size: var(--step-0);
+    color: var(--ink-soft); line-height: 1.45; min-height: 2.6em; text-wrap: pretty;
+  }
+  .match-verdict strong { font-style: normal; font-family: var(--sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); }
+
+  .carillon-line {
+    margin-top: var(--space-1); font-family: var(--serif); font-style: italic;
+    font-size: var(--step-0); color: var(--muted);
+  }
+  .now-mark { color: var(--accent); font-style: normal; font-weight: 600; font-size: 0.75em; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* ---------- Pixel fish ---------- */
+  .fish-lane { position: relative; height: 0; overflow: visible; }
+  .fish {
+    position: absolute; top: -16px; left: calc(100% - 64px);
+    width: 60px; height: 33px; border: 0; padding: 0; background: none; cursor: help;
+  }
+  .fish img { width: 100%; height: 100%; image-rendering: pixelated; transform: scaleX(-1); }
+  .fish::after {
+    content: attr(data-tip);
+    position: absolute; bottom: 130%; right: 0;
+    width: max-content; max-width: 260px;
+    font: 400 0.72rem/1.5 var(--sans); letter-spacing: 0.02em;
+    color: var(--muted); text-align: left;
+    background: var(--cream); border: 1px solid var(--hairline);
+    border-radius: 4px; padding: 0.5rem 0.7rem;
+    box-shadow: 0 4px 14px rgba(28, 24, 20, 0.12);
+    opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+  }
+  .fish:hover::after, .fish:focus-visible::after { opacity: 1; }
+  @media (prefers-reduced-motion: no-preference) {
+    html.js .fish.swim { animation: fishswim 18s linear forwards; }
+    @keyframes fishswim {
+      from { left: -70px; }
+      to { left: calc(100% - 64px); }
+    }
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    html.js .reveal { opacity: 1 !important; transform: none !important; }
+    body { background: #fff; color: #000; }
+    .site-head, .skip-link, .hero-actions, .btn,
+    .fish-lane, .carillon-line, .voro-fig, .matcher-fig { display: none !important; }
+    .feature, .xp, .skill-group, .edu-item, .laws li { break-inside: avoid; page-break-inside: avoid; }
+    .shot img { box-shadow: none; max-height: 3.2in; width: auto; }
+    a.live-link::after, .contact-meta a::after, .hero-social a::after {
+      content: " (" attr(href) ")";
+      font-size: 0.78em; font-weight: 400; color: #444; word-break: break-all;
+    }
+    .contact-mail { border-bottom: none; }
+    .stats { border-color: #999; }
+    .section { padding-block: 1.5rem 0; }
+  }
 </style>
 </head>
 <body>
@@ -466,6 +621,7 @@
     <a class="brand" href="#top">Santiago <em>Saca</em></a>
     <nav class="site-nav" aria-label="Site">
       <a href="#projects">Projects</a>
+      <a class="hide-sm" href="#method">Method</a>
       <a class="hide-sm" href="#experience">Experience</a>
       <a class="hide-sm" href="#skills">Skills</a>
       <a href="#contact">Contact</a>
@@ -587,10 +743,28 @@
             <a class="live-link" href="https://lustro-web.fly.dev" target="_blank" rel="noopener" aria-label="Live site — Lustro (opens in new tab)">Live site <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <div class="feature-media reveal">
+        <div class="feature-media media-stack reveal">
           <figure class="shot">
             <img src="assets/img/lustro-home.jpg" alt="Lustro landing page with the headline 'Clean your master data for any ERP, with AI'" width="1440" height="900" loading="lazy" decoding="async">
             <figcaption><b>The self-serve front door.</b> Upload a file, map the headers, and export an ERP-ready package.</figcaption>
+          </figure>
+          <figure class="shot matcher-fig needs-js">
+            <div class="fig-frame matcher">
+              <div>
+                <label for="m-a">Vendor record A</label>
+                <input id="m-a" type="text" value="ACME Industries, LLC" autocomplete="off" spellcheck="false">
+              </div>
+              <div>
+                <label for="m-b">Vendor record B</label>
+                <input id="m-b" type="text" value="Acme Industries Inc" autocomplete="off" spellcheck="false">
+              </div>
+              <div class="match-meter" aria-hidden="true">
+                <div class="match-bar"><b id="m-bar"></b></div>
+                <span class="match-score" id="m-score">—</span>
+              </div>
+              <p class="match-verdict" id="m-verdict" role="status" aria-live="polite"></p>
+            </div>
+            <figcaption><b>Try it — edit a name.</b> A miniature of Lustro's matcher: legal suffixes stripped, names scored, and even a 100% fuzzy match only ever <em>routes to review</em> — never auto-merges.</figcaption>
           </figure>
         </div>
       </div>
@@ -616,6 +790,12 @@
           <div class="feature-links">
             <a class="live-link" href="https://viveguate.gt" target="_blank" rel="noopener" aria-label="Live site — ViveGuate (opens in new tab)">Live site <span aria-hidden="true">↗</span></a>
           </div>
+          <figure class="shot voro-fig needs-js" style="margin-top: var(--space-3);">
+            <div class="fig-frame">
+              <canvas class="voro-canvas" id="voro" aria-label="Interactive Voronoi tessellation — drag the points to reshape the cells, the same geometry ViveGuate uses to draw zone-pricing polygons"></canvas>
+            </div>
+            <figcaption><b>Try it — drag a point.</b> How zone pricing gets its shape: the same Voronoi tessellation ViveGuate clips to municipal boundaries, computed live in this figure.</figcaption>
+          </figure>
         </div>
         <div class="reveal">
           <ul class="highlights">
@@ -631,6 +811,11 @@
 
     <!-- 04 — The Veil Strand -->
     <article class="feature feature--spread" id="veil">
+      <div class="fish-lane needs-js" aria-hidden="false">
+        <button class="fish" id="fish" type="button" data-tip="kelp drum — generated with PixelLab against the game's forced 886-color master palette; provenance ledger entry, 2026-06-11. Every Veil Strand asset carries one." aria-label="A pixel-art kelp drum fish from The Veil Strand. Generated with PixelLab against the game's forced color palette and logged in the asset provenance ledger.">
+          <img src="assets/img/kelp-drum.png" alt="" width="40" height="22">
+        </button>
+      </div>
       <header class="feature-head reveal">
         <div class="feature-no"><span class="no">No. 04</span><span class="domain">Game development</span></div>
         <h3>The Veil Strand</h3>
@@ -711,6 +896,41 @@
         </div>
       </div>
     </article>
+  </section>
+
+  <!-- ============ Method ============ -->
+  <section class="section wrap" id="method">
+    <div class="section-head reveal">
+      <p class="kicker">Method</p>
+      <h2>Rules I build by.</h2>
+      <p class="lede">Five independent systems kept teaching the same lessons. At some point they stopped being habits and became laws — each one enforced by a named mechanism, not a slogan.</p>
+    </div>
+    <ul class="laws">
+      <li class="reveal">
+        <span class="law">A false merge is worse than a missed duplicate.</span>
+        <span class="receipt">Lustro and ViveGuate only auto-merge records on exact identifiers. Every fuzzy match — however confident — routes to a human, so a wrong merge of two legal entities can never reach the ERP or the map.</span>
+      </li>
+      <li class="reveal">
+        <span class="law">No one approves their own request — including us.</span>
+        <span class="receipt">iDOT's segregation-of-duties engine blocks self-approval in code, even for the master-data team that operates the platform.</span>
+      </li>
+      <li class="reveal">
+        <span class="law">AI fails open, never silently wrong.</span>
+        <span class="receipt">Every AI feature in ViveGuate is forced through schema-validated tool use, checked against the app's own taxonomy, and degrades to non-AI behavior on any error or missing key.</span>
+      </li>
+      <li class="reveal">
+        <span class="law">No balance number lives in code, ever.</span>
+        <span class="receipt">The Veil Strand keeps every gameplay number in versioned data files behind hard-fail schema validation that names the offending row. Tuning the game never means touching the engine.</span>
+      </li>
+      <li class="reveal">
+        <span class="law">The audit log must be unable to lie.</span>
+        <span class="receipt">Lustro's append-only, hash-chained audit trail is enforced by a database trigger — application code can't soften it, and tampering breaks the chain visibly.</span>
+      </li>
+      <li class="reveal">
+        <span class="law">An AI budget is a design constraint, not a hope.</span>
+        <span class="receipt">Lustro hard-caps AI spend per job; when the meter runs out it degrades to flagging instead of fixing. Costs are engineered, not discovered on the invoice.</span>
+      </li>
+    </ul>
   </section>
 
   <!-- ============ Experience ============ -->
@@ -819,7 +1039,7 @@
       </div>
       <footer class="colophon" role="contentinfo">
         <span>© 2026 Santiago Saca</span>
-        <span>One HTML file, two typefaces, no frameworks.</span>
+        <span>One HTML file, two self-hosted typefaces, no frameworks.</span>
       </footer>
     </div>
   </section>
@@ -843,6 +1063,244 @@
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
   for (var j = 0; j < els.length; j++) io.observe(els[j]);
+})();
+
+/* Pre-warm the Fly.io demos while the reader is still reading their case study,
+   so the "Live site" click never lands on a cold start. Fires once each. */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var targets = { idot: 'https://idot-pim-sasaca.fly.dev/health', lustro: 'https://lustro-web.fly.dev/' };
+  var warmed = {};
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var id = e.target.id;
+      if (e.isIntersecting && !warmed[id]) {
+        warmed[id] = true;
+        try { fetch(targets[id], { mode: 'no-cors', cache: 'no-store' }); } catch (err) {}
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '600px 0px' });
+  Object.keys(targets).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) io.observe(el);
+  });
+})();
+
+/* Carillon keeps your clock: mark the triptych frame that matches local time. */
+(function () {
+  var trip = document.querySelector('#veil .triptych');
+  if (!trip) return;
+  var h = new Date().getHours();
+  var idx, phrase;
+  if (h >= 7 && h < 16) { idx = 0; phrase = "it's daylight where you are."; }
+  else if (h >= 16 && h < 22) { idx = 1; phrase = "it's dusk where you are."; }
+  else { idx = 2; phrase = "the tide runs after midnight where you are."; }
+  var cap = trip.querySelectorAll('figcaption')[idx];
+  if (cap) {
+    var mark = document.createElement('span');
+    mark.className = 'now-mark';
+    mark.textContent = ' · now';
+    cap.appendChild(mark);
+  }
+  var line = document.createElement('p');
+  line.className = 'carillon-line';
+  line.textContent = 'Carillon keeps your clock — ' + phrase;
+  trip.insertAdjacentElement('afterend', line);
+})();
+
+/* One provenance-logged pixel fish. Swims the hairline once per session,
+   then settles at the end of the rule like a printer's ornament. */
+(function () {
+  var fish = document.getElementById('fish');
+  var veil = document.getElementById('veil');
+  if (!fish || !veil || !('IntersectionObserver' in window)) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var swam = false;
+  try { swam = sessionStorage.getItem('veil-fish') === '1'; } catch (e) {}
+  if (reduce || swam) return; // stays as a static ornament
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        fish.classList.add('swim');
+        try { sessionStorage.setItem('veil-fish', '1'); } catch (err) {}
+        io.disconnect();
+      }
+    });
+  }, { threshold: 0.05 });
+  io.observe(veil);
+})();
+
+/* Live Voronoi: the same tessellation ViveGuate clips to municipal boundaries. */
+(function () {
+  var canvas = document.getElementById('voro');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var seeds = [];
+  var SEED_FRACS = [
+    [0.08, 0.30], [0.16, 0.74], [0.24, 0.18], [0.30, 0.55], [0.38, 0.86],
+    [0.44, 0.28], [0.52, 0.62], [0.58, 0.12], [0.64, 0.84], [0.70, 0.40],
+    [0.78, 0.68], [0.84, 0.22], [0.90, 0.52], [0.13, 0.50], [0.47, 0.90], [0.95, 0.80]
+  ];
+  var TINTS = [[247, 241, 228], [243, 236, 221], [239, 230, 211]];
+  var INK = [28, 24, 20];
+  var W = 0, H = 0, dpr = 1, raf = 0;
+
+  function resize() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = Math.round(r.width); H = Math.round(r.height);
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    if (!seeds.length) {
+      seeds = SEED_FRACS.map(function (f) { return { x: f[0] * W, y: f[1] * H }; });
+    } else {
+      seeds.forEach(function (s) { s.x = Math.min(s.x, W); s.y = Math.min(s.y, H); });
+    }
+    draw();
+  }
+
+  function draw() {
+    var sw = Math.max(1, W >> 1), sh = Math.max(1, H >> 1); // compute at half res
+    var own = new Int8Array(sw * sh);
+    var img = ctx.createImageData(sw, sh);
+    var d = img.data;
+    for (var y = 0; y < sh; y++) {
+      for (var x = 0; x < sw; x++) {
+        var px = (x + 0.5) * 2, py = (y + 0.5) * 2;
+        var best = 0, bd = 1e9;
+        for (var i = 0; i < seeds.length; i++) {
+          var dx = seeds[i].x - px, dy = seeds[i].y - py;
+          var dist = dx * dx + dy * dy;
+          if (dist < bd) { bd = dist; best = i; }
+        }
+        own[y * sw + x] = best;
+      }
+    }
+    for (var y2 = 0; y2 < sh; y2++) {
+      for (var x2 = 0; x2 < sw; x2++) {
+        var k = y2 * sw + x2;
+        var o = own[k];
+        var edge = (x2 + 1 < sw && own[k + 1] !== o) || (y2 + 1 < sh && own[k + sw] !== o);
+        var c = edge ? INK : TINTS[o % 3];
+        var p = k * 4;
+        d[p] = c[0]; d[p + 1] = c[1]; d[p + 2] = c[2]; d[p + 3] = edge ? 110 : 255;
+      }
+    }
+    // paint: cream base, then upscale the half-res field
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.fillStyle = '#f7f1e4';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    var off = document.createElement('canvas');
+    off.width = sw; off.height = sh;
+    off.getContext('2d').putImageData(img, 0, 0);
+    ctx.imageSmoothingEnabled = true;
+    ctx.drawImage(off, 0, 0, canvas.width, canvas.height);
+    // seed points in sienna
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    for (var j = 0; j < seeds.length; j++) {
+      ctx.beginPath();
+      ctx.arc(seeds[j].x, seeds[j].y, 3.2, 0, 7);
+      ctx.fillStyle = '#a0431f';
+      ctx.fill();
+    }
+  }
+
+  var dragging = -1;
+  function pos(ev) {
+    var r = canvas.getBoundingClientRect();
+    return { x: ev.clientX - r.left, y: ev.clientY - r.top };
+  }
+  canvas.addEventListener('pointerdown', function (ev) {
+    var p = pos(ev), bd = 1e9;
+    for (var i = 0; i < seeds.length; i++) {
+      var dx = seeds[i].x - p.x, dy = seeds[i].y - p.y;
+      var dist = dx * dx + dy * dy;
+      if (dist < bd) { bd = dist; dragging = i; }
+    }
+    if (bd > 1600) { dragging = -1; return; } // only grab within 40px
+    canvas.setPointerCapture(ev.pointerId);
+    ev.preventDefault();
+  });
+  canvas.addEventListener('pointermove', function (ev) {
+    if (dragging < 0) return;
+    var p = pos(ev);
+    seeds[dragging].x = Math.max(0, Math.min(W, p.x));
+    seeds[dragging].y = Math.max(0, Math.min(H, p.y));
+    if (!raf) raf = requestAnimationFrame(function () { raf = 0; draw(); });
+  });
+  canvas.addEventListener('pointerup', function () { dragging = -1; });
+  canvas.addEventListener('pointercancel', function () { dragging = -1; });
+
+  var ro = 'ResizeObserver' in window ? new ResizeObserver(resize) : null;
+  if (ro) ro.observe(canvas); else { resize(); window.addEventListener('resize', resize); }
+})();
+
+/* Lustro matcher miniature: suffix-stripped, Jaro-Winkler scored, review-only. */
+(function () {
+  var a = document.getElementById('m-a'), b = document.getElementById('m-b');
+  var bar = document.getElementById('m-bar'), score = document.getElementById('m-score'), verdict = document.getElementById('m-verdict');
+  if (!a || !b || !bar) return;
+
+  function normalize(s) {
+    return s.toLowerCase()
+      .replace(/[.,&()'"]/g, ' ')
+      .replace(/\b(llc|inc|incorporated|corp|corporation|co|company|ltd|limited|gmbh|sa|s a|de cv|plc|lp|llp)\b/g, ' ')
+      .replace(/\s+/g, ' ').trim();
+  }
+  function jaro(s1, s2) {
+    if (s1 === s2) return 1;
+    var len1 = s1.length, len2 = s2.length;
+    if (!len1 || !len2) return 0;
+    var win = Math.max(0, Math.floor(Math.max(len1, len2) / 2) - 1);
+    var m1 = new Array(len1).fill(false), m2 = new Array(len2).fill(false);
+    var matches = 0;
+    for (var i = 0; i < len1; i++) {
+      var lo = Math.max(0, i - win), hi = Math.min(i + win + 1, len2);
+      for (var j = lo; j < hi; j++) {
+        if (!m2[j] && s1[i] === s2[j]) { m1[i] = m2[j] = true; matches++; break; }
+      }
+    }
+    if (!matches) return 0;
+    var t = 0, k = 0;
+    for (var i2 = 0; i2 < len1; i2++) {
+      if (m1[i2]) {
+        while (!m2[k]) k++;
+        if (s1[i2] !== s2[k]) t++;
+        k++;
+      }
+    }
+    t /= 2;
+    return (matches / len1 + matches / len2 + (matches - t) / matches) / 3;
+  }
+  function jaroWinkler(s1, s2) {
+    var j = jaro(s1, s2);
+    var prefix = 0;
+    for (var i = 0; i < Math.min(4, s1.length, s2.length); i++) {
+      if (s1[i] === s2[i]) prefix++; else break;
+    }
+    return j + prefix * 0.1 * (1 - j);
+  }
+  function update() {
+    var na = normalize(a.value), nb = normalize(b.value);
+    var s = (na && nb) ? jaroWinkler(na, nb) : 0;
+    var pct = Math.round(s * 100);
+    bar.style.width = pct + '%';
+    score.textContent = pct + '%';
+    var html;
+    if (!na || !nb) {
+      html = '<strong>Waiting</strong> — give both records a name.';
+    } else if (s >= 0.95) {
+      html = '<strong>Match — routed to review</strong> — near-certain duplicate after suffix stripping, but it’s a name match, not an exact identifier. A human confirms; it never auto-merges.';
+    } else if (s >= 0.85) {
+      html = '<strong>Gray zone — queued</strong> — plausibly the same entity. Exactly the residue Lustro sends to its review queue (and, only if enabled, to a budget-capped AI adjudicator).';
+    } else {
+      html = '<strong>No match</strong> — distinct entities. Better to miss a duplicate than to merge two real companies.';
+    }
+    verdict.innerHTML = html;
+  }
+  a.addEventListener('input', update);
+  b.addEventListener('input', update);
+  update();
 })();
 </script>
 </body>

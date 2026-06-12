@@ -1,0 +1,5 @@
+Fraunces (c) 2020 The Fraunces Project Authors — SIL Open Font License 1.1
+  https://github.com/undercasetype/Fraunces/blob/master/OFL.txt
+Inter (c) 2016 The Inter Project Authors — SIL Open Font License 1.1
+  https://github.com/rsms/inter/blob/master/LICENSE.txt
+Both fonts are redistributed here (latin subsets, woff2) under the SIL OFL 1.1.
