@@ -1,0 +1,11 @@
+# internal working files — not part of the published site
+CONTENT-BRIEF.md
+BUILD-SPEC.md
+research.json
+variant-a.html
+variant-b.html
+variant-c.html
+judge/
+assets/shots/
+assets/og-source.html
+.DS_Store

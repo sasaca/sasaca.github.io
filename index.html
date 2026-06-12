@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Santiago Saca — Business Data Consultant &amp; Builder</title>
+<meta name="description" content="Santiago Saca fixes enterprise master data by day and builds the tools he wishes existed by night: an AI-assisted PIM, an AI data-cleansing engine for SAP, Guatemala's Zillow, and more. Miami, FL.">
+<meta property="og:title" content="Santiago Saca — Business Data Consultant &amp; Builder">
+<meta property="og:description" content="Enterprise data consultant who ships real software: five products built end to end, four live in production. Master data by day, working code by night.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sasaca.github.io/">
+<meta property="og:image" content="https://sasaca.github.io/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Santiago Saca — Business Data Consultant &amp; Builder">
+<meta name="twitter:description" content="Enterprise data consultant who ships real software: five products built end to end, four live in production.">
+<meta name="twitter:image" content="https://sasaca.github.io/assets/img/og.png">
+<link rel="canonical" href="https://sasaca.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Santiago Saca",
+  "jobTitle": "Business Data Consultant",
+  "worksFor": { "@type": "Organization", "name": "Genpact" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Indiana University Bloomington" },
+  "email": "mailto:santiagosaca23@gmail.com",
+  "url": "https://sasaca.github.io/",
+  "sameAs": [
+    "https://www.linkedin.com/in/santiago-saca/",
+    "https://github.com/sasaca"
+  ],
+  "knowsLanguage": ["en", "es"],
+  "knowsAbout": ["Master Data Management", "Data Governance", "Data Quality", "Product Information Management", "Supplier Information Management"]
+}
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23faf6ee'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-style='italic' text-anchor='middle' fill='%23a0431f'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.className = 'js';</script>
+<style>
+  :root {
+    --cream: #faf6ee;
+    --cream-deep: #f3ecdd;
+    --ink: #1c1814;
+    --ink-soft: #45403a;
+    --muted: #5d564c;
+    --faint: #726a5e;
+    --hairline: rgba(28, 24, 20, 0.14);
+    --hairline-soft: rgba(28, 24, 20, 0.08);
+    --accent: #a0431f;
+    --accent-deep: #7e3115;
+    --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+    --sans: "Inter", -apple-system, "Segoe UI", sans-serif;
+
+    --step--1: clamp(0.8125rem, 0.79rem + 0.12vw, 0.875rem);
+    --step-0: clamp(1rem, 0.96rem + 0.22vw, 1.125rem);
+    --step-1: clamp(1.15rem, 1.08rem + 0.35vw, 1.35rem);
+    --step-2: clamp(1.45rem, 1.3rem + 0.75vw, 1.875rem);
+    --step-3: clamp(1.9rem, 1.6rem + 1.5vw, 2.75rem);
+    --step-4: clamp(2.4rem, 1.9rem + 2.6vw, 3.9rem);
+    --step-5: clamp(2.7rem, 1.85rem + 4.2vw, 5.1rem);
+
+    --space-1: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+    --space-2: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+    --space-3: clamp(1.75rem, 1.5rem + 1.25vw, 2.75rem);
+    --space-4: clamp(3rem, 2.4rem + 3vw, 5.5rem);
+    --space-5: clamp(5rem, 3.8rem + 6vw, 9.5rem);
+
+    --measure: 65ch;
+    --wide: 76rem;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-padding-top: 5.5rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  body {
+    font-family: var(--sans);
+    font-size: var(--step-0);
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--accent); color: var(--cream); }
+
+  h1, h2, h3 {
+    font-family: var(--serif);
+    font-optical-sizing: auto;
+    font-weight: 420;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  img { display: block; max-width: 100%; height: auto; }
+
+  a { color: inherit; }
+  p a, li a {
+    text-decoration: underline;
+    text-decoration-color: rgba(160, 67, 31, 0.45);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.22em;
+    transition: color 0.18s ease, text-decoration-color 0.18s ease;
+  }
+  p a:hover, li a:hover { color: var(--accent-deep); text-decoration-color: var(--accent-deep); }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .skip-link {
+    position: absolute; left: 1rem; top: -4rem;
+    background: var(--ink); color: var(--cream);
+    padding: 0.6rem 1rem; font-size: var(--step--1); font-weight: 500;
+    border-radius: 0 0 6px 6px; z-index: 100; text-decoration: none;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus { top: 0; }
+
+  .wrap { max-width: var(--wide); margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 3rem); }
+
+  /* ---------- Header ---------- */
+  .site-head {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(250, 246, 238, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--hairline-soft);
+  }
+  .site-head .wrap {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding-block: 1.1rem;
+  }
+  .brand {
+    font-family: var(--serif); font-size: 1.2rem; font-weight: 500;
+    text-decoration: none; letter-spacing: -0.01em;
+  }
+  .brand em { font-style: italic; color: var(--accent); }
+  .site-nav { display: flex; gap: clamp(1.1rem, 2.5vw, 2.25rem); }
+  .site-nav a {
+    font-size: var(--step--1); font-weight: 500; text-decoration: none;
+    color: var(--muted); letter-spacing: 0.01em;
+    padding-block: 0.55rem;
+    border-bottom: 1px solid transparent;
+    transition: color 0.18s ease, border-color 0.18s ease;
+  }
+  .site-nav a:hover { color: var(--ink); border-bottom-color: var(--accent); }
+  @media (max-width: 600px) {
+    .site-nav .hide-sm { display: none; }
+  }
+
+  /* ---------- Kickers, rules ---------- */
+  .kicker {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--accent);
+  }
+  .kicker--mute { color: var(--faint); }
+  .rule { border: 0; border-top: 1px solid var(--hairline); }
+
+  /* ---------- Hero ---------- */
+  .hero { padding-block: var(--space-5) var(--space-4); }
+  .hero-top {
+    display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+    margin-bottom: var(--space-3);
+  }
+  .hero-top .rule-flex { flex: 1; min-width: 3rem; border-top: 1px solid var(--hairline); }
+  .hero h1 {
+    font-size: var(--step-5);
+    font-weight: 380;
+    line-height: 1.06;
+    max-width: 21ch;
+    letter-spacing: -0.018em;
+  }
+  .hero h1 em {
+    font-style: italic; font-weight: 420; color: var(--accent);
+  }
+  .hero .dek {
+    margin-top: var(--space-3);
+    max-width: var(--measure);
+    font-size: var(--step-1);
+    line-height: 1.6;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+  .byline {
+    margin-top: var(--space-3);
+    display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  }
+  .byline img {
+    width: 58px; height: 58px; border-radius: 50%;
+    object-fit: cover; border: 1px solid var(--hairline);
+    box-shadow: 0 2px 8px rgba(28, 24, 20, 0.1);
+  }
+  .byline .who { line-height: 1.4; }
+  .byline .who strong { font-weight: 600; font-size: var(--step--1); display: block; }
+  .byline .who span { display: block; font-size: var(--step--1); color: var(--muted); }
+  .byline img { image-orientation: none; }
+  .hero-actions {
+    margin-top: var(--space-3);
+    display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block; text-decoration: none;
+    font-size: var(--step--1); font-weight: 600; letter-spacing: 0.02em;
+    padding: 0.8rem 1.5rem; border-radius: 999px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+  }
+  .btn-ink { background: var(--ink); color: var(--cream); border: 1px solid var(--ink); }
+  .btn-ink:hover { background: var(--accent-deep); border-color: var(--accent-deep); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(126, 49, 21, 0.22); }
+  .btn-line { border: 1px solid rgba(28, 24, 20, 0.4); color: var(--ink); background: transparent; }
+  .btn-line:hover { border-color: var(--ink); transform: translateY(-1px); }
+  .hero-social { display: flex; gap: 1.25rem; }
+  .hero-social a {
+    display: inline-block;
+    font-size: var(--step--1); font-weight: 500; color: var(--muted);
+    text-decoration: none; border-bottom: 1px solid var(--hairline);
+    padding-block: 0.35rem 0.2rem; transition: color 0.18s ease, border-color 0.18s ease;
+  }
+  .hero-social a:hover { color: var(--accent-deep); border-bottom-color: var(--accent-deep); }
+
+  /* ---------- Stats ---------- */
+  .stats {
+    border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
+    padding-block: var(--space-3);
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-2);
+  }
+  .stat { padding-inline: 0.25rem; }
+  .stat + .stat { border-left: 1px solid var(--hairline-soft); padding-left: var(--space-2); }
+  .stat b {
+    font-family: var(--serif); font-weight: 400; font-size: var(--step-4);
+    line-height: 1; display: block; letter-spacing: -0.02em;
+  }
+  .stat b sup { font-size: 0.45em; color: var(--accent); font-weight: 500; top: -0.9em; position: relative; }
+  .stat span {
+    display: block; margin-top: 0.6rem;
+    font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--muted); line-height: 1.5;
+  }
+  @media (max-width: 760px) {
+    .stats { grid-template-columns: 1fr 1fr; row-gap: var(--space-3); }
+    .stat:nth-child(3) { border-left: 0; padding-left: 0.25rem; }
+  }
+
+  /* ---------- Sections ---------- */
+  .section { padding-block: var(--space-5) 0; }
+  .section-head { margin-bottom: var(--space-4); }
+  .section-head h2 {
+    font-size: var(--step-3); margin-top: var(--space-1);
+    max-width: 24ch;
+  }
+  .section-head .lede {
+    margin-top: var(--space-2); max-width: var(--measure);
+    color: var(--ink-soft); text-wrap: pretty;
+  }
+
+  /* ---------- Projects ---------- */
+  .feature { padding-block: var(--space-4); border-top: 1px solid var(--hairline); }
+  .feature-head { margin-bottom: var(--space-3); }
+  .feature-no {
+    display: flex; align-items: baseline; gap: 1rem; margin-bottom: var(--space-2);
+  }
+  .feature-no .no {
+    font-family: var(--serif); font-style: italic; font-size: var(--step-2);
+    color: var(--accent); font-weight: 400; line-height: 1;
+  }
+  .feature-no .domain {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--faint);
+  }
+  .feature h3 { font-size: var(--step-3); }
+  .feature .tagline {
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: var(--step-1); color: var(--ink-soft);
+    margin-top: 0.6rem; max-width: 50ch; line-height: 1.45; text-wrap: pretty;
+  }
+
+  .feature-body {
+    display: grid; gap: var(--space-3) clamp(2rem, 5vw, 4.5rem);
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .feature-body { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
+    .feature--flip .feature-body > .feature-media { order: -1; }
+  }
+
+  .feature-text p { max-width: var(--measure); color: var(--ink-soft); text-wrap: pretty; }
+  .feature-text p + p { margin-top: var(--space-2); }
+
+  .highlights { list-style: none; margin-top: var(--space-2); }
+  .highlights li {
+    position: relative; padding: var(--space-1) 0 var(--space-1) 1.6rem;
+    border-top: 1px solid var(--hairline-soft);
+    font-size: var(--step--1); line-height: 1.6; color: var(--ink-soft);
+    max-width: var(--measure);
+  }
+  .highlights li::before {
+    content: "—"; position: absolute; left: 0; color: var(--accent);
+    font-family: var(--serif);
+  }
+  .highlights li strong { color: var(--ink); font-weight: 600; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: var(--space-2); }
+  .tags span {
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); border: 1px solid var(--hairline);
+    padding: 0.3rem 0.7rem; border-radius: 999px; white-space: nowrap;
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  .feature-links { margin-top: var(--space-2); display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+  .live-link {
+    display: inline-block;
+    font-size: var(--step--1); font-weight: 600; text-decoration: none;
+    color: var(--accent-deep); border-bottom: 1px solid rgba(160, 67, 31, 0.4);
+    padding-block: 0.35rem 0.15rem; transition: border-color 0.18s ease, color 0.18s ease;
+  }
+  .live-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .dev-badge {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent-deep); border: 1px solid rgba(160, 67, 31, 0.35);
+    padding: 0.35rem 0.8rem; border-radius: 999px; background: rgba(160, 67, 31, 0.06);
+  }
+
+  figure.shot { margin: 0; }
+  .shot img {
+    width: 100%; border-radius: 6px;
+    border: 1px solid var(--hairline);
+    box-shadow: 0 1px 2px rgba(28, 24, 20, 0.05), 0 16px 40px -12px rgba(28, 24, 20, 0.18);
+    background: var(--cream-deep);
+  }
+  .shot figcaption {
+    margin-top: 0.7rem; font-size: 0.78rem; color: var(--faint);
+    letter-spacing: 0.02em;
+  }
+  .shot figcaption b { color: var(--muted); font-weight: 600; }
+  .shot--px img { image-rendering: pixelated; }
+
+  .media-stack { display: grid; gap: var(--space-2); }
+  .media-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); }
+  @media (max-width: 540px) { .media-pair { grid-template-columns: 1fr; } }
+
+  /* Wide spread variant (ViveGuate) */
+  .feature--spread .spread-media { margin-bottom: var(--space-3); }
+  .feature--spread .spread-cols {
+    display: grid; gap: var(--space-3) clamp(2rem, 5vw, 4.5rem);
+  }
+  @media (min-width: 900px) {
+    .feature--spread .spread-cols { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
+  }
+
+  /* Triptych variant (Veil Strand) */
+  .triptych {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2);
+    margin-block: var(--space-3);
+  }
+  @media (max-width: 760px) { .triptych { grid-template-columns: 1fr; } }
+
+  /* ---------- Experience ---------- */
+  .xp {
+    display: grid; gap: var(--space-2) clamp(2rem, 5vw, 4.5rem);
+    border-top: 1px solid var(--hairline); padding-top: var(--space-3);
+  }
+  @media (min-width: 900px) { .xp { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); } }
+  .xp-meta h3 { font-size: var(--step-2); }
+  .xp-meta .org { font-family: var(--serif); font-style: italic; color: var(--accent-deep); font-size: var(--step-1); margin-top: 0.35rem; }
+  .xp-meta .when { margin-top: var(--space-1); font-size: var(--step--1); color: var(--muted); line-height: 1.7; }
+  .xp-body > p { max-width: var(--measure); color: var(--ink-soft); text-wrap: pretty; }
+
+  /* ---------- Skills ---------- */
+  .skills { display: grid; gap: var(--space-3); border-top: 1px solid var(--hairline); padding-top: var(--space-3); }
+  @media (min-width: 760px) { .skills { grid-template-columns: repeat(3, 1fr); gap: clamp(2rem, 4vw, 3.5rem); } }
+  .skill-group h3 {
+    font-size: var(--step-1); font-weight: 500; margin-bottom: var(--space-1);
+  }
+  .skill-group h3 em { font-style: italic; color: var(--accent); }
+  .skill-group ul { list-style: none; }
+  .skill-group li {
+    font-size: var(--step--1); color: var(--ink-soft);
+    padding-block: 0.45rem; border-bottom: 1px solid var(--hairline-soft);
+  }
+
+  /* ---------- Education ---------- */
+  .edu { border-top: 1px solid var(--hairline); padding-top: var(--space-3); display: grid; gap: var(--space-2); }
+  @media (min-width: 760px) { .edu { grid-template-columns: 1fr 1fr; gap: clamp(2rem, 4vw, 3.5rem); } }
+  .edu-item { display: flex; gap: 1.25rem; align-items: baseline; }
+  .edu-item .year { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: var(--step-1); min-width: 3.2rem; }
+  .edu-item h3 { font-size: var(--step-1); font-weight: 500; }
+  .edu-item p { font-size: var(--step--1); color: var(--muted); margin-top: 0.25rem; }
+
+  /* ---------- Contact / footer ---------- */
+  .contact { padding-block: var(--space-5); }
+  .contact-inner { border-top: 1px solid var(--hairline); padding-top: var(--space-4); }
+  .contact h2 { font-size: var(--step-4); font-weight: 380; max-width: 18ch; }
+  .contact h2 em { font-style: italic; color: var(--accent); }
+  .contact .lede { margin-top: var(--space-2); max-width: var(--measure); color: var(--ink-soft); text-wrap: pretty; }
+  .contact-mail {
+    display: inline-block; margin-top: var(--space-3);
+    font-family: var(--serif); font-size: var(--step-2); font-weight: 400;
+    color: var(--ink); text-decoration: none;
+    border-bottom: 2px solid rgba(160, 67, 31, 0.45);
+    padding-bottom: 0.15rem;
+    transition: color 0.18s ease, border-color 0.18s ease;
+    overflow-wrap: anywhere;
+  }
+  .contact-mail:hover { color: var(--accent-deep); border-bottom-color: var(--accent-deep); }
+  .contact-meta {
+    margin-top: var(--space-3); display: flex; gap: 1.5rem; flex-wrap: wrap;
+    font-size: var(--step--1); color: var(--muted);
+  }
+  .contact-meta a {
+    display: inline-block;
+    color: var(--muted); text-decoration: none; font-weight: 500;
+    border-bottom: 1px solid var(--hairline); padding-block: 0.35rem 0.2rem;
+    transition: color 0.18s ease, border-color 0.18s ease;
+  }
+  .contact-meta a:hover { color: var(--accent-deep); border-bottom-color: var(--accent-deep); }
+
+  .colophon {
+    border-top: 1px solid var(--hairline-soft); margin-top: var(--space-4);
+    padding-block: var(--space-2);
+    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    font-size: 0.78rem; color: var(--faint);
+  }
+
+  /* ---------- Reveal animation ---------- */
+  @media (prefers-reduced-motion: no-preference) {
+    html.js .reveal {
+      opacity: 0; transform: translateY(18px);
+      transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.2, 0.65, 0.25, 1);
+    }
+    html.js .reveal.is-visible { opacity: 1; transform: none; }
+    html.js .stats .stat:nth-child(2) { transition-delay: 0.08s; }
+    html.js .stats .stat:nth-child(3) { transition-delay: 0.16s; }
+    html.js .stats .stat:nth-child(4) { transition-delay: 0.24s; }
+    html.js .triptych .shot:nth-child(2) { transition-delay: 0.1s; }
+    html.js .triptych .shot:nth-child(3) { transition-delay: 0.2s; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .btn-ink:hover, .btn-line:hover { transform: none; }
+  }
+
+  @media (max-width: 420px) {
+    .byline { gap: 0.8rem; }
+    .hero-actions { gap: 0.9rem; }
+    .btn { padding: 0.7rem 1.2rem; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">Santiago <em>Saca</em></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="#projects">Projects</a>
+      <a class="hide-sm" href="#experience">Experience</a>
+      <a class="hide-sm" href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ Hero ============ -->
+  <section class="hero wrap" id="top">
+    <div class="hero-top">
+      <p class="kicker">Business Data Consultant · Builder</p>
+      <span class="rule-flex" aria-hidden="true"></span>
+      <p class="kicker kicker--mute">Miami, Florida</p>
+    </div>
+    <h1>I fix enterprise data <em>by day</em> — and build the tools I wish existed <em>by night</em>.</h1>
+    <p class="dek">Nearly four years in Genpact's Business Data Services practice taught me how product, vendor, and customer data actually breaks inside Fortune 500 systems. So I started shipping the software I kept wishing my clients had: an AI-assisted master-data platform, a cleansing engine for SAP migrations, a live real-estate marketplace for Guatemala — and one very ambitious fishing game.</p>
+    <div class="byline">
+      <img src="assets/img/profile.jpg" alt="Santiago Saca smiling outdoors at the Grand Palace in Bangkok" width="116" height="116">
+      <p class="who">
+        <strong>Santiago Saca</strong>
+        <span>Miami, FL · English &amp; Spanish · M.S. Information Systems, Indiana University</span>
+        <span>Currently building: Lustro &amp; The Veil Strand</span>
+      </p>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-ink" href="#projects">View projects</a>
+      <a class="btn btn-line" href="#contact">Get in touch</a>
+      <div class="hero-social">
+        <a href="https://github.com/sasaca" target="_blank" rel="noopener" aria-label="GitHub profile (opens in new tab)">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/santiago-saca/" target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in new tab)">LinkedIn <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Numbers strip ============ -->
+  <section class="wrap" aria-label="At a glance">
+    <div class="stats">
+      <div class="stat reveal"><b>5</b><span>Products designed &amp; built solo</span></div>
+      <div class="stat reveal"><b>4</b><span>Live in production today</span></div>
+      <div class="stat reveal"><b>90<sup>k+</sup></b><span>Lines of code across projects</span></div>
+      <div class="stat reveal"><b>4</b><span>Industries served at Genpact</span></div>
+    </div>
+  </section>
+
+  <!-- ============ Projects ============ -->
+  <section class="section wrap" id="projects">
+    <div class="section-head reveal">
+      <p class="kicker">Selected work</p>
+      <h2>Five products, built end to end.</h2>
+      <p class="lede">Everything below was designed, engineered, and built by one person. All five share a thesis: the discipline I sell as a consultant — clean data, governed workflows, audit trails — is worth building directly into software.</p>
+    </div>
+
+    <!-- 01 — iDOT PIM -->
+    <article class="feature" id="idot">
+      <header class="feature-head reveal">
+        <div class="feature-no"><span class="no">No. 01</span><span class="domain">Enterprise master data</span></div>
+        <h3>iDOT PIM</h3>
+        <p class="tagline">An AI-assisted master data platform with enterprise-grade approval workflows, compliance routing, and segregation of duties.</p>
+      </header>
+      <div class="feature-body">
+        <div class="feature-text reveal">
+          <p>iDOT manages the three core enterprise master-data domains — vendor, customer, and product — from first request to approved record. Every change runs through a configurable approval workflow with SLA tracking, audit timelines, and compliance branches for LATAM, EU, SOX, and GxP rules. It is the exact discipline I design for Fortune 500 clients, implemented as working software.</p>
+          <ul class="highlights">
+            <li><strong>Context-aware workflow engine</strong> inserts approval steps at runtime: corporate security review for LATAM vendors, finance sign-off for the EU, supervisor review whenever SOX-sensitive fields like bank accounts are touched.</li>
+            <li><strong>Segregation of duties enforced in code</strong> — no one can approve their own request, including the master-data team itself.</li>
+            <li><strong>Claude-powered document AI:</strong> upload a W-9 or VAT certificate and the onboarding form fills itself, with an "AI-populated" badge on every field for the audit trail.</li>
+            <li><strong>Weighted fuzzy matching</strong> across name, tax ID, DUNS, and address stops duplicate vendors before they are ever created.</li>
+            <li><strong>Roughly 21,700 lines of code</strong> — 109 routes, 27 database tables, 13 demo roles — built in ten days.</li>
+          </ul>
+          <div class="tags">
+            <span>Node.js</span><span>Express</span><span>SQLite</span><span>Claude API</span><span>Tailwind CSS</span><span>Docker</span><span>Fly.io</span>
+          </div>
+          <div class="feature-links">
+            <a class="live-link" href="https://idot-pim-sasaca.fly.dev" target="_blank" rel="noopener" aria-label="Live site — iDOT PIM (opens in new tab)">Live site <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="feature-media media-stack reveal">
+          <figure class="shot">
+            <img src="assets/img/idot-workflow.jpg" alt="iDOT PIM's no-code workflow configurator showing trigger rules for a LATAM escalation scenario" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>The no-code workflow configurator.</b> Admins build trigger rules against form fields that are auto-discovered from the live form.</figcaption>
+          </figure>
+          <div class="media-pair">
+            <figure class="shot">
+              <img src="assets/img/idot-onboarding.jpg" alt="iDOT vendor onboarding request with an AI document-upload step that reads W-9s and pre-fills the form" width="1440" height="900" loading="lazy" decoding="async">
+              <figcaption>AI document upload: Claude reads W-9s and pre-fills the form.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="assets/img/idot-dashboard.jpg" alt="iDOT role-based dashboard with KPIs and quick actions" width="1440" height="900" loading="lazy" decoding="async">
+              <figcaption>Role-based dashboards with KPIs and quick actions.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 02 — Lustro -->
+    <article class="feature feature--flip" id="lustro">
+      <header class="feature-head reveal">
+        <div class="feature-no"><span class="no">No. 02</span><span class="domain">Data cleansing for ERP</span></div>
+        <h3>Lustro</h3>
+        <p class="tagline">AI-powered master-data cleansing that turns dirty vendor lists into SAP-loadable files — with a human in the loop only when confidence is low.</p>
+      </header>
+      <div class="feature-body">
+        <div class="feature-text reveal">
+          <p>ERP migrations still run on consultants hand-cleansing spreadsheets for weeks. Lustro takes messy vendor, customer, product, or finance master data, cleanses and standardizes it, and outputs the exact load format the target ERP requires — SAP S/4HANA first, with Oracle and Dynamics 365 profiles. A deterministic rules engine handles the predictable majority; AI touches only the ambiguous residue under a hard $2-per-job budget cap.</p>
+          <ul class="highlights">
+            <li><strong>Generates the real SAP Migration Cockpit package</strong> — the per-structure CSV-ZIP format most teams assume is a simple Excel file. It isn't, and Lustro builds it correctly.</li>
+            <li><strong>Sanctions screening built in:</strong> vendors and customers checked against 71,095 bundled OFAC and EU entries with two-tier exact and fuzzy matching.</li>
+            <li><strong>Tamper-evident by design:</strong> an append-only, hash-chained audit log enforced by a database trigger, with strict per-customer data isolation.</li>
+            <li><strong>A hard safety guardrail:</strong> fuzzy matches never auto-merge, so a confidently wrong merge of two legal entities can never reach the ERP.</li>
+            <li><strong>Live with self-serve signup</strong> and a free tier — with Stripe billing and two-factor login built in, about 15,500 lines across a rules engine, API, batch worker, and React app.</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Claude API</span><span>React</span><span>TypeScript</span><span>Stripe</span><span>Fly.io</span>
+          </div>
+          <div class="feature-links">
+            <a class="live-link" href="https://lustro-web.fly.dev" target="_blank" rel="noopener" aria-label="Live site — Lustro (opens in new tab)">Live site <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="feature-media reveal">
+          <figure class="shot">
+            <img src="assets/img/lustro-home.jpg" alt="Lustro landing page with the headline 'Clean your master data for any ERP, with AI'" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>The self-serve front door.</b> Upload a file, map the headers, and export an ERP-ready package.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03 — ViveGuate -->
+    <article class="feature feature--spread" id="viveguate">
+      <header class="feature-head reveal">
+        <div class="feature-no"><span class="no">No. 03</span><span class="domain">Consumer marketplace · Live at viveguate.gt</span></div>
+        <h3>ViveGuate</h3>
+        <p class="tagline">Guatemala's Zillow: the country's property listings on one map — deduplicated, and priced with real comps.</p>
+      </header>
+      <figure class="shot spread-media reveal">
+        <img src="assets/img/viveguate-map.jpg" alt="ViveGuate's split-screen search: listing cards on the left, a Google Map of Guatemala City with clustered price pins on the right" width="1440" height="900" loading="lazy" decoding="async">
+        <figcaption><b>The split-screen search.</b> One canonical record per home, no matter how many sites list it.</figcaption>
+      </figure>
+      <div class="spread-cols">
+        <div class="feature-text reveal">
+          <p>Guatemala had no Zillow — inventory was scattered across dozens of broker sites and classifieds, with no unified search and no price transparency. ViveGuate aggregates listings from about 40 sources into one deduplicated map, layers on an automated valuation model with transparent comps, and wraps it in a full marketplace: accounts, offers, messaging, and email alerts.</p>
+          <div class="tags">
+            <span>TypeScript</span><span>Next.js 15</span><span>Prisma</span><span>PostgreSQL</span><span>Google Maps</span><span>Claude API</span><span>Vercel</span>
+          </div>
+          <div class="feature-links">
+            <a class="live-link" href="https://viveguate.gt" target="_blank" rel="noopener" aria-label="Live site — ViveGuate (opens in new tab)">Live site <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="reveal">
+          <ul class="highlights">
+            <li><strong>8,000+ live listings</strong> from 39 source adapters, kept clean by 30 production cron jobs running staged ingestion waves and nightly data-quality passes.</li>
+            <li><strong>A cross-source deduplication engine</strong> — blocking, deterministic scoring, AI tie-breaks only on the gray zone — built on the principle that a false merge is worse than a missed duplicate.</li>
+            <li><strong>A valuation model that shows its work:</strong> anonymized comps behind every estimate, uncertainty bands that widen honestly, and backtests that grade the model's accuracy.</li>
+            <li><strong>Computational geometry in production:</strong> zone price polygons generated with Voronoi tessellation, clipped to official municipal boundaries.</li>
+            <li><strong>About 44,700 lines of TypeScript</strong> shipped solo to a real domain — legal pages, one-time-code login, SEO, and a 131-finding audit closed out through a four-gate checklist.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 04 — The Veil Strand -->
+    <article class="feature feature--spread" id="veil">
+      <header class="feature-head reveal">
+        <div class="feature-no"><span class="no">No. 04</span><span class="domain">Game development</span></div>
+        <h3>The Veil Strand</h3>
+        <p class="tagline">A solo-built fishing life-sim where every story beat is something you catch — run with studio-grade data discipline.</p>
+      </header>
+      <div class="spread-cols reveal">
+        <div class="feature-text">
+          <p>My dream game, in active development for Steam. You inherit a tackle shop in Carillon, a harbor town that gives its unbearable memories to the sea; on rare "Silvered tides" the water turns mirror-still and you can fish the past back, one fragment at a time. Fishing is simultaneously the economy and the story.</p>
+          <p>It is also a deliberately engineered production. The first prototype was retired with a written eight-cause postmortem, and the reboot runs on CI-enforced quality gates, a fully data-driven architecture, and complete asset provenance.</p>
+        </div>
+        <div>
+          <ul class="highlights">
+            <li><strong>A deterministic nine-state fishing engine</strong> with seeded randomness, so any session can be replayed exactly — backed by 23 dedicated unit tests inside a CI deploy gate that runs 89, with a standing law that no failing build ever merges.</li>
+            <li><strong>Every balance number lives in data files, never code,</strong> and all 324 generated or purchased art assets carry a machine-readable provenance record audited by CI.</li>
+            <li><strong>An AI art pipeline locked to an 886-color master palette</strong> with a per-pixel audit, so generated art can never drift off-style.</li>
+            <li><strong>151,000 words of design documentation</strong> — story bible, art direction, and an 18-month roadmap with budgets and risk registers.</li>
+            <li><strong>Playable today:</strong> a free-walk town build with a day-night cycle, animated water, and the signature full-screen Silvered-tide shader.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="triptych">
+        <figure class="shot shot--px reveal">
+          <img src="assets/img/veil-noon.png" alt="Pixel-art screenshot of the harbor town Carillon at noon" width="1536" height="960" loading="lazy" decoding="async">
+          <figcaption><b>Noon.</b> Carillon on an ordinary day.</figcaption>
+        </figure>
+        <figure class="shot shot--px reveal">
+          <img src="assets/img/veil-dusk.png" alt="Pixel-art screenshot of Carillon at dusk, windows glowing with warm lamplight" width="1536" height="960" loading="lazy" decoding="async">
+          <figcaption><b>Dusk.</b> Lamplight on the harbor.</figcaption>
+        </figure>
+        <figure class="shot shot--px reveal">
+          <img src="assets/img/veil-silvered.png" alt="Pixel-art screenshot of Carillon during a Silvered tide, the water mirror-still and silver" width="1536" height="960" loading="lazy" decoding="async">
+          <figcaption><b>The Silvered tide.</b> The game's signature moment — the sea goes mirror-still.</figcaption>
+        </figure>
+      </div>
+      <div class="reveal">
+        <div class="tags">
+          <span>Godot 4.6</span><span>GDScript</span><span>Python tooling</span><span>GitHub Actions CI</span><span>PixelLab API</span><span>ElevenLabs API</span><span>Custom shaders</span>
+        </div>
+        <div class="feature-links">
+          <span class="dev-badge">In development — Godot 4</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 05 — Lumetric Films -->
+    <article class="feature feature--flip" id="lumetric">
+      <header class="feature-head reveal">
+        <div class="feature-no"><span class="no">No. 05</span><span class="domain">Client work</span></div>
+        <h3>Lumetric Films</h3>
+        <p class="tagline">A cinematic portfolio and booking site, designed and built single-handedly for a real video production studio in New York.</p>
+      </header>
+      <div class="feature-body">
+        <div class="feature-text reveal">
+          <p>A working videographer had real clients but no professional web presence. I acted as consultant and developer: gathered requirements, structured the studio's videos and pricing into one clean data model, and shipped a polished site the owner updates by editing plain data files — no developer needed for routine changes. First commit to live deployment in about two weeks.</p>
+          <ul class="highlights">
+            <li><strong>A custom live-preview engine:</strong> each portfolio tile silently loops a hand-picked segment of its video, spun up only when the tile scrolls into view and torn down when it leaves.</li>
+            <li><strong>A theater-mode lightbox</strong> with category playlists, keyboard navigation, and a properly focus-trapped dialog.</li>
+            <li><strong>Everything is data-driven:</strong> 12 portfolio videos, 5 categories, and 19 priced offerings live in plain data files the client can edit themselves.</li>
+            <li><strong>Accessibility taken seriously</strong> for a marketing site — focus traps, screen-reader labels, and full reduced-motion support.</li>
+            <li><strong>Real stakes:</strong> live pricing, a working inquiry pipeline to the owner's inbox, and verified production work for named clients.</li>
+          </ul>
+          <div class="tags">
+            <span>React 19</span><span>Vite</span><span>Tailwind CSS 4</span><span>YouTube IFrame API</span><span>Web3Forms</span><span>Vercel</span>
+          </div>
+          <div class="feature-links">
+            <a class="live-link" href="https://lumetric-films.vercel.app" target="_blank" rel="noopener" aria-label="Live site — Lumetric Films (opens in new tab)">Live site <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="feature-media media-stack reveal">
+          <figure class="shot">
+            <img src="assets/img/lumetric-work.jpg" alt="Lumetric Films portfolio section showing live performance work on a cinematic dark layout" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption><b>The portfolio grid.</b> Every tile is a live, muted preview — no static thumbnails.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/img/lumetric-home.jpg" alt="Lumetric Films homepage hero, dark and cinematic with bokeh and the studio wordmark" width="1440" height="900" loading="lazy" decoding="async">
+            <figcaption>The hero, with a sequenced entrance animation built around a hand-drawn SVG wordmark.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ Experience ============ -->
+  <section class="section wrap" id="experience">
+    <div class="section-head reveal">
+      <p class="kicker">Experience</p>
+      <h2>Where the domain expertise comes from.</h2>
+      <p class="lede">The day job is the research lab. Nearly four years inside global master-data programs is why the products above understand compliance routing, survivorship rules, and segregation of duties.</p>
+    </div>
+    <div class="xp reveal">
+      <div class="xp-meta">
+        <h3>Business Data Consultant</h3>
+        <p class="org">Genpact — Business Data Services</p>
+        <p class="when">Aug 2022 – Present · Miami, FL<br>Life Sciences &amp; Healthcare · Food &amp; Beverage · CPG · Manufacturing</p>
+      </div>
+      <div class="xp-body">
+        <ul class="highlights">
+          <li>Authored the functional Business Requirements Document for a <strong>global Supplier Information Management system</strong> — smart workflows, embedded regional compliance, ERP integration, and third-party risk assessment.</li>
+          <li>Wrote user stories and functional specs for a <strong>global Product Information Management system</strong>, including automated component reuse and multi-variant product creation in a single workflow.</li>
+          <li>Led <strong>data quality workstreams</strong> end to end: maturity assessments; profiling across completeness, uniqueness, validity, accuracy, and consistency; and remediation across customer, vendor, and product domains.</li>
+          <li>Defined <strong>data quality KPIs</strong> and built a Power BI dashboard tracking product master data quality across LATAM.</li>
+          <li>Partnered with business and technical stakeholders to design <strong>target-state operating models</strong>, end-to-end process maps, and fit–gap analyses against industry best practices.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Skills ============ -->
+  <section class="section wrap" id="skills">
+    <div class="section-head reveal">
+      <p class="kicker">Skills</p>
+      <h2>The toolkit, in three layers.</h2>
+    </div>
+    <div class="skills">
+      <div class="skill-group reveal">
+        <h3>Master Data <em>&amp; Delivery</em></h3>
+        <ul>
+          <li>MDM — Customer / Vendor / Product</li>
+          <li>PIM &amp; Supplier Information Management</li>
+          <li>Data Governance &amp; Data Quality</li>
+          <li>Data Maturity Assessment</li>
+          <li>Fit–Gap Analysis &amp; E2E Process Mapping</li>
+          <li>BRDs, User Stories, Stakeholder Workshops</li>
+        </ul>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Data <em>&amp; Analytics</em></h3>
+        <ul>
+          <li>Data Profiling</li>
+          <li>Data Cleansing / Deduplication / Enrichment</li>
+          <li>Power BI</li>
+          <li>KPI Design</li>
+        </ul>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Tools <em>&amp; Tech</em></h3>
+        <ul>
+          <li>Python &amp; SQL</li>
+          <li>Snowflake &amp; PowerMe (data profiling)</li>
+          <li>Git</li>
+          <li>Next.js / TypeScript — shipped full-stack products</li>
+          <li>Node.js</li>
+          <li>Godot / GDScript</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Education ============ -->
+  <section class="section wrap" id="education">
+    <div class="section-head reveal">
+      <p class="kicker">Education</p>
+      <h2>Indiana University Bloomington.</h2>
+      <p class="lede">Both degrees are from IU — and I'm preparing to go back for the next one. The projects above taught me data architecture, entity resolution, and AI reliability in practice; graduate study is how I put deeper theory underneath them.</p>
+    </div>
+    <div class="edu">
+      <div class="edu-item reveal">
+        <span class="year">2022</span>
+        <div>
+          <h3>M.S. Information Systems</h3>
+          <p>Indiana University Bloomington</p>
+        </div>
+      </div>
+      <div class="edu-item reveal">
+        <span class="year">2021</span>
+        <div>
+          <h3>B.S. Business Administration</h3>
+          <p>Indiana University Bloomington</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Contact ============ -->
+  <section class="contact wrap" id="contact">
+    <div class="contact-inner reveal">
+      <p class="kicker">Contact</p>
+      <h2>If any of this is useful to you, <em>say hello.</em></h2>
+      <p class="lede">I'm happy to talk about master data, the products above, graduate study, or what it takes to ship software solo. English or Spanish — whichever you prefer.</p>
+      <a class="contact-mail" href="mailto:santiagosaca23@gmail.com">santiagosaca23@gmail.com</a>
+      <div class="contact-meta">
+        <a href="https://www.linkedin.com/in/santiago-saca/" target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in new tab)">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/sasaca" target="_blank" rel="noopener" aria-label="GitHub profile (opens in new tab)">GitHub <span aria-hidden="true">↗</span></a>
+        <span>Miami, FL</span>
+        <span>English &amp; Spanish</span>
+      </div>
+      <footer class="colophon" role="contentinfo">
+        <span>© 2026 Santiago Saca</span>
+        <span>One HTML file, two typefaces, no frameworks.</span>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    for (var i = 0; i < els.length; i++) els[i].classList.add('is-visible');
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+  for (var j = 0; j < els.length; j++) io.observe(els[j]);
+})();
+</script>
+</body>
+</html>
